@@ -1,0 +1,15 @@
+{
+  "name": "Socket-Chat-Express",
+  "version": "1.0.0",
+  "description": "Socket based chat system",
+  "main": "server.js",
+  "author": "capcod3r@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+  "express": "^4.15.2",
+  "socket.io": "^1.7.3"
+  },
+  "script":{
+    "start":"node server.js"
+  }
+}
