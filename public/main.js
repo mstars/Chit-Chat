@@ -28,9 +28,9 @@ $(function() {
   const addParticipantsMessage = (data) => {
     var message = '';
     if (data.numUsers === 1) {
-      message += "there's 1 participant";
+      message += "There's 1 participant";
     } else {
-      message += "there are " + data.numUsers + " participants";
+      message += "There are " + data.numUsers + " participants";
     }
     log(message);
   }
@@ -56,7 +56,7 @@ $(function() {
     var message = $inputMessage.val();
     // Prevent markup from being injected into the message
     message = cleanInput(message);
-    // if there is a non-empty message and a socket connection
+    // if There is a non-empty message and a socket connection
     if (message && connected) {
       $inputMessage.val('');
       addChatMessage({
@@ -76,7 +76,7 @@ $(function() {
 
   // Adds the visual chat message to the message list
   const addChatMessage = (data, options) => {
-    // Don't fade the message in if there is an 'X was typing'
+    // Don't fade the message in if There is an 'X was typing'
     var $typingMessages = getTypingMessages(data);
     options = options || {};
     if ($typingMessages.length !== 0) {
@@ -229,7 +229,7 @@ $(function() {
   socket.on('login', (data) => {
     connected = true;
     // Display the welcome message
-    var message = "Welcome to Socket.IO Chat – ";
+    var message = "Chit Chat" ;
     log(message, {
       prepend: true
     });
@@ -265,18 +265,18 @@ $(function() {
   });
 
   socket.on('disconnect', () => {
-    log('you have been disconnected');
+    log('You have been disconnected');
   });
 
   socket.on('reconnect', () => {
     log('you have been reconnected');
     if (username) {
-      socket.emit('add user', username);
+      socket.emit('Add user', username);
     }
   });
 
   socket.on('reconnect_error', () => {
-    log('attempt to reconnect has failed');
+    log('Attempt to reconnect has failed');
   });
 
 });
