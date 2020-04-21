@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var server = require('http').createServer(app);
-var io = require('../..')(server);
+var io = require('./lib/index')(server);
 var port = process.env.PORT || 8400;
 
 server.listen(port, () => {
@@ -11,7 +11,7 @@ server.listen(port, () => {
 });
 
 // Routing
-app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Chatroom
 
