@@ -5,7 +5,7 @@
   "main": "server.js",
   "author": "Linto Thomas",
   "dependencies": {
-    "engine.io": "^3.4.1",
+    "engine.io": "^4.1.2",
     "express": "4.13.4",
     "debug": "~4.1.0",
     "has-binary2": "~1.0.2",
