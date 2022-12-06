@@ -6,7 +6,7 @@
   "author": "Linto Thomas",
   "dependencies": {
     "engine.io": "^3.4.1",
-    "express": "4.13.4",
+    "express": "4.17.3",
     "debug": "~4.1.0",
     "has-binary2": "~1.0.2",
     "socket.io-adapter": "~1.1.0",
